@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+   
+<div class="navbar">
+    <div class="logos">
+        <div class="logo">
+            <img src="logo2.png" alt="Logo">
+        </div>
+        <div class="logo1">
+            <img src="logo1.png" alt="Logo">
+        </div>
+    </div>
+    <div class="nav-links">
+        <div class="dropdown">
+            <a href="index.html" class="dropbtn">Courses</a>
+            <div class="dropdown-content">
+              <a href="index.html">Full Stack</a>
+              <a href="index.html">Data Science</a>
+              <a href="index.html">Digital Marketing</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+            <div class="dropdown-content">
+              <a href="internshipsweb.html">Internship</a>
+              <a href="placement.html">Placements</a>
+          </div>
+            
+        </div>
+        
+        <div class="dropdown">
+            <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+        </div>
+        <div class="dropdown">
+            <a href="#resources" class="dropbtn">Resources</a>
+            <div class="dropdown-content">
+                <a href="test.html">SAT</a>
+                <a href="mocks.html">Mock interview</a>
+                <a href="chatbot.html">Chatbot</a>
+            </div>
+        </div>
+     
+        <div class="dropdown">
+            <a href="#company" class="dropbtn">Contact Us</a>
+           
+        </div>
+        <div>
+          <a href="mid.html" class="dropbtn">Sign Out</a>
+        </div>
+    </div>
+    <div class="profile">
+      <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+  </div>
+  </div>
+    <!-- Hero Section -->
+    <section class="bg-dark-red text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold">Learn New Skills Online with Top Instructors</h2>
+            <p class="mt-4 text-lg">Join millions of learners from around the world</p>
+            <button class="mt-6 bg-white text-dark-red px-4 py-2 rounded">Explore Courses</button>
+        </div>
+    </section>
+
+    <!-- Course Listings -->
+    <section id="courses" class="container mx-auto py-12">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-dark-red">Available Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Full Stack Web Development</h3>
+                <p class="mt-2">Duration: 12 weeks</p>
+                <p>Instructor: John Doe</p>
+                <p>Level: Beginner</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='detail.html'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Data Science with Python</h3>
+                <p class="mt-2">Duration: 10 weeks</p>
+                <p>Instructor: Jane Smith</p>
+                <p>Level: Intermediate</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='data.html'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Digital Marketing</h3>
+                <p class="mt-2">Duration: 8 weeks</p>
+                <p>Instructor: Alice Johnson</p>
+                <p>Level: Advanced</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='test.html'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Machine Learning</h3>
+                <p class="mt-2">Duration: 12 weeks</p>
+                <p>Instructor: Bob Williams</p>
+                <p>Level: Intermediate</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='course-details.html?course=machine-learning'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Graphic Design</h3>
+                <p class="mt-2">Duration: 6 weeks</p>
+                <p>Instructor: Maria Brown</p>
+                <p>Level: Beginner</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='course-details.html?course=graphic-design'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Cybersecurity</h3>
+                <p class="mt-2">Duration: 14 weeks</p>
+                <p>Instructor: Tom Davis</p>
+                <p>Level: Advanced</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='course-details.html?course=cybersecurity'">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-red text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Course Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-highlight: rgba(0, 0, 0, 0.25);
+}
+
+body {
+    margin: 0;
+    background: #1d1b24;
+    color: rgba(255, 255, 255, 0.95);
+    height: 100vh;
+    font-family: "Euclid Circular A", "Poppins", sans-serif;
+}
+
+.sidebar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 64px;
+    background: #522ad3;
+    transition: width 0.45s;
+}
+
+.sidebar:hover {
+    width: 180px;
+}
+
+.sidebar:hover .header h1,
+.sidebar:hover a p {
+    opacity: 1;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 72px;
+    padding: 0 20px 0 8px;
+    background: var(--color-highlight);
+}
+
+.header img {
+    height: 24px;
+    transform: rotate(180deg);
+    margin-left: 14px;
+}
+
+.header h1,
+.sidebar a p {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    opacity: 0;
+    margin: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.175s;
+    color: #fff;
+}
+
+.header h1 {
+    left: 50px;
+}
+
+.sidebar a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between the icon and text */
+    height: 44px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 16px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar a:hover {
+    background: var(--color-highlight);
+    opacity: 1;
+}
+
+.sidebar a .nav-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px; /* Adjust this value to change the gap */
+}

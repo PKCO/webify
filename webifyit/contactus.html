@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Us - Webify</title>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+        .active { text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="navbar">
+        <div class="logos">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <div class="logo1">
+                <img src="logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Courses</a>
+                <div class="dropdown-content">
+                  <a href="index.html">Full Stack</a>
+                  <a href="index.html">Data Science</a>
+                  <a href="index.html">Digital Marketing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+                <div class="dropdown-content">
+                  <a href="internshipsweb.html">Internship</a>
+                  <a href="placement.html">Placements</a>
+              </div>
+                
+            </div>
+            
+            <div class="dropdown">
+                <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+            </div>
+            <div class="dropdown">
+                <a href="#resources" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="test.html">SAT</a>
+                    <a href="mocks.html">Mock interview</a>
+                    <a href="chatbot.html">Chatbot</a>
+                </div>
+            </div>
+         
+            <div class="dropdown">
+                <a href="contactus.html" class="dropbtn">Contact Us</a>
+               
+            </div>
+            <div>
+              <a href="mid.html" class="dropbtn">Sign Out</a>
+            </div>
+        </div>
+        <div class="profile">
+          <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+      </div>
+      </div>
+
+    <!-- Hero Section -->
+    <section class="bg-dark-red text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-semibold">Get in Touch With Us</h1>
+            <p class="mt-4 text-lg">We're here to answer any questions you may have.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="container mx-auto py-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-center mb-6 text-dark-red">Your Details</h2>
+            <form action="cont.html" method="POST" onsubmit="redirectToResponsePage()">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-lg mb-2">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded" required></textarea>
+                </div>
+                <button type="submit" class="bg-dark-red text-white px-4 py-2 rounded w-full">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-semibold text-center mb-6 text-dark-red">Contact Information</h2>
+        <address class="bg-white p-8 rounded-lg shadow-lg text-center">
+            Webify<br>
+            123 Main Street<br>
+            Vizag, 530004<br>
+            Phone: <a href="tel:1234567890" class="text-dark-red">123-456-7890</a><br>
+            Email: <a href="mailto:harvesthub@gmail.com" class="text-dark-red">webify@gmail.com</a>
+        </address>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-red text-white p-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Webify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

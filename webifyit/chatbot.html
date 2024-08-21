@@ -1,0 +1,161 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance AI Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: #8b0000; /* Dark red */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .chat-messages p {
+            margin: 10px 0;
+        }
+
+        .chat-messages .user-message {
+            text-align: right;
+            color: #4a90e2;
+        }
+
+        .chat-messages .bot-message {
+            text-align: left;
+            color: #555;
+        }
+
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .chat-input button {
+            background-color: #8b0000; /* Dark red */
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .chat-input button:hover {
+            background-color: #990000; /* Darker red */
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            
+            <h1>Career Guidance AI Chatbot</h1>
+
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+            <button type="submit" onclick="window.location.href='homepage.html'" class="submit-btn bg-dark-red text-white px-4 py-2 rounded">Back</button>
+
+        </div>
+    </div>
+   
+
+    <script>
+        const responses = {
+            "hi": "Hello! How can I assist you with your career today?",
+            "hello": "Hi there! What can I do for you?",
+            "career": "I can provide guidance on various career paths. What field are you interested in?",
+            "job": "There are many jobs available in tech, healthcare, finance, and more. What are you looking for specifically?",
+            "help": "I'm here to help! Ask me anything about careers.",
+            "resume": "I can help you create a strong resume. What job are you applying for?",
+            "interview": "Interview preparation is key! Do you need help with common questions or tips on how to answer?",
+            "skills": "Which skills are you looking to develop? I can suggest courses and resources.",
+            "education": "What level of education are you interested in? I can guide you on degrees and certifications.",
+            "networking": "Networking is crucial for career growth. Would you like tips on how to network effectively?",
+            "remote work": "Remote work opportunities are growing. Are you looking for tips on finding remote jobs or succeeding in them?",
+            "salary": "Salary expectations can vary by industry and location. Which job are you inquiring about?",
+            "promotion": "For promotions, focus on showcasing your skills and contributions. Need specific advice?",
+            "thank you": "You're welcome! If you have any other questions, feel free to ask.",
+            "engineering": "Engineering is a great field with many specializations such as software, civil, mechanical, and electrical engineering. Which one are you interested in?",
+            "healthcare": "Healthcare offers numerous opportunities including roles like doctors, nurses, and medical technicians. Are you looking for clinical or administrative roles?",
+            "finance": "The finance sector includes jobs in banking, investment, accounting, and financial planning. What specific area are you interested in?",
+            "arts": "A career in the arts can include visual arts, performing arts, and design. Which area are you passionate about?",
+            "it": "The IT sector is vast, with roles in software development, network security, data analysis, and more. What interests you the most?",
+            "marketing": "Marketing includes digital marketing, content creation, SEO, and more. What aspect of marketing are you curious about?",
+            "law": "A career in law can involve being a lawyer, paralegal, or legal assistant. Are you interested in a specific legal field?",
+            "Education": "Education careers range from teaching to administration and curriculum development. Which role are you looking into?",
+            "software development": "Software development is a lucrative field with high demand. Are you interested in front-end, back-end, or full-stack development?",
+            "nursing": "Nursing is a rewarding career that requires compassion and dedication. What kind of nursing role are you considering?",
+            "investment banking": "Investment banking involves advising clients on financial transactions and raising capital. Are you interested in corporate finance or mergers and acquisitions?",
+            "graphic design": "Graphic design involves creating visual content for various purposes. What type of design work are you interested in?",
+            "data analysis": "Data analysis involves interpreting data to identify trends and make business decisions. What industry are you interested in analyzing data for?",
+            "social media marketing": "Social media marketing involves promoting products or services through social media platforms. What industry are you interested in marketing for?",
+            "criminal law": "Criminal law involves prosecuting or defending individuals accused of crimes. Are you interested in working as a prosecutor or defense attorney?",
+            "teaching": "Teaching is a noble profession that involves educating students. What subject or grade level are you interested in teaching?",
+            "default": "I'm not sure how to respond to that. Can you please rephrase?"
+        
+        };
+
+        function sendMessage() {
+            const userInput = document.getElementById('userInput').value.trim().toLowerCase();
+            if (userInput !== '') {
+                appendMessage(userInput, 'user-message');
+                document.getElementById('userInput').value = '';
+                const response = responses[userInput] || responses["default"];
+                setTimeout(() => appendMessage(response, 'bot-message'), 500);
+            }
+        }
+
+        function appendMessage(message, className) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageElement = document.createElement('p');
+            messageElement.className = className;
+            messageElement.innerText = message;
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>

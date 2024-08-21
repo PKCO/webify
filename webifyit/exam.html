@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Assessment Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .result {
+            display: none;
+        }
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    
+    <div class="container mx-auto max-w-lg bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center text-dark-red mb-4">Skill Assessment Test</h1>
+        <p class="mb-4">Welcome to the Skill Assessment Test. This test is designed to evaluate your proficiency in various skills related to web development. Please read each question carefully and answer to the best of your ability.</p>
+        <p class="mb-4"><strong>Time Limit:</strong> 1 minute<br><strong>Number of Questions:</strong> 6<br><strong>Passing Score:</strong> 70%</p>
+
+        <form id="assessmentForm">
+            <h2 class="text-2xl font-semibold text-dark-red mb-4">HTML Assessment</h2>
+            <div class="question mb-4">
+                <p>1. What does the <code>&lt;a&gt;</code> tag in HTML stand for?</p>
+                <div>
+                    <input type="radio" id="q1a" name="q1" value="a" required>
+                    <label for="q1a">a) Anchor</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1b" name="q1" value="b">
+                    <label for="q1b">b) Align</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1c" name="q1" value="c">
+                    <label for="q1c">c) Attribute</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1d" name="q1" value="d">
+                    <label for="q1d">d) Add</label>
+                </div>
+            </div>
+            
+            <div class="question mb-4">
+                <p>2. Which attribute is used to specify the URL in the <code>&lt;a&gt;</code> tag?</p>
+                <div>
+                    <input type="radio" id="q2a" name="q2" value="a" required>
+                    <label for="q2a">a) src</label>
+                </div>
+                <div>
+                    <input type="radio" id="q2b" name="q2" value="b">
+                    <label for="q2b">b) href</label>
+                </div>
+                <div>
+                    <input type="radio" id="q2c" name="q2" value="c">
+                    <label for="q2c">c) link</label>
+                </div>
+                <div>
+                    <input type="radio" id="q2d" name="q2" value="d">
+                    <label for="q2d">d) url</label>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-dark-red mb-4">CSS Assessment</h2>
+            <div class="question mb-4">
+                <p>3. Which property is used to change the background color in CSS?</p>
+                <div>
+                    <input type="radio" id="q3a" name="q3" value="a" required>
+                    <label for="q3a">a) color</label>
+                </div>
+                <div>
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">b) bgcolor</label>
+                </div>
+                <div>
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">c) background-color</label>
+                </div>
+                <div>
+                    <input type="radio" id="q3d" name="q3" value="d">
+                    <label for="q3d">d) background</label>
+                </div>
+            </div>
+            
+            <div class="question mb-4">
+                <p>4. How do you make a list not display bullet points in CSS?</p>
+                <div>
+                    <input type="radio" id="q4a" name="q4" value="a" required>
+                    <label for="q4a">a) list-style-type: none;</label>
+                </div>
+                <div>
+                    <input type="radio" id="q4b" name="q4" value="b">
+                    <label for="q4b">b) text-decoration: none;</label>
+                </div>
+                <div>
+                    <input type="radio" id="q4c" name="q4" value="c">
+                    <label for="q4c">c) list-type: none;</label>
+                </div>
+                <div>
+                    <input type="radio" id="q4d" name="q4" value="d">
+                    <label for="q4d">d) bullet-style: none;</label>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-dark-red mb-4">JavaScript Assessment</h2>
+            <div class="question mb-4">
+                <p>5. Which keyword is used to declare a variable in JavaScript?</p>
+                <div>
+                    <input type="radio" id="q5a" name="q5" value="a" required>
+                    <label for="q5a">a) var</label>
+                </div>
+                <div>
+                    <input type="radio" id="q5b" name="q5" value="b">
+                    <label for="q5b">b) let</label>
+                </div>
+                <div>
+                    <input type="radio" id="q5c" name="q5" value="c">
+                    <label for="q5c">c) const</label>
+                </div>
+                <div>
+                    <input type="radio" id="q5d" name="q5" value="d">
+                    <label for="q5d">d) All of the above</label>
+                </div>
+            </div>
+            
+            <div class="question mb-4">
+                <p>6. How do you create a function in JavaScript?</p>
+                <div>
+                    <input type="radio" id="q6a" name="q6" value="a" required>
+                    <label for="q6a">a) function myFunction() {}</label>
+                </div>
+                <div>
+                    <input type="radio" id="q6b" name="q6" value="b">
+                    <label for="q6b">b) create myFunction() {}</label>
+                </div>
+                <div>
+                    <input type="radio" id="q6c" name="q6" value="c">
+                    <label for="q6c">c) define myFunction() {}</label>
+                </div>
+                <div>
+                    <input type="radio" id="q6d" name="q6" value="d">
+                    <label for="q6d">d) function: myFunction() {}</label>
+                </div>
+            </div>
+
+            <div class="section">
+                <button type="submit" class="submit-btn bg-dark-red text-white px-4 py-2 rounded">Submit</button>
+                
+
+            </div>
+        </form>
+        
+        
+        <div id="result" class="result bg-red-100 p-4 rounded mt-6">
+            <h2 class="text-2xl font-bold">Test Results</h2>
+            <p id="score" class="text-lg"></p>
+        </div>
+    </div>
+    <button type="submit" onclick="window.location.href='test.html'" class="submit-btn bg-dark-red text-white px-4 py-2 rounded">Back</button>
+    <script>
+        let timeLeft = 60; // 1 minute in seconds
+        let timerInterval;
+
+        document.getElementById('assessmentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            clearInterval(timerInterval);
+            calculateScore();
+        });
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('assessmentForm').submit();
+                }
+            }, 1000);
+        }
+
+        function calculateScore() {
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'c',
+                q4: 'a',
+                q5: 'd',
+                q6: 'a'
+            };
+
+            let score = 0;
+            const totalQuestions = 6;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const question = document.querySelector(`input[name="q${i}"]:checked`);
+                if (question && question.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            const percentage = (score / totalQuestions) * 100;
+            displayResult(percentage);
+        }
+
+        function displayResult(percentage) {
+            const resultDiv = document.getElementById('result');
+            const scoreText = document.getElementById('score');
+
+            resultDiv.style.display = 'block';
+            scoreText.innerText = `You scored ${percentage}%. ${percentage >= 70 ? 'Congratulations, you passed!' : 'Unfortunately, you did not pass.'}`;
+        }
+
+        // Start the timer when the form is loaded
+        window.onload = startTimer;
+    </script>
+</body>
+</html>

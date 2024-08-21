@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Login and Slideshow</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 60px;
+    margin-right: 10px; 
+}
+
+.logo1 img {
+    width: 100px;
+    height: 50px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar .nav-links a.active {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Profile icon styling */
+.navbar .profile {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f0f0f0;
+}
+
+.container {
+    padding: 16px;
+    max-width: 400px;
+    margin: 40px auto; 
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+input[type=text]::placeholder {
+    color: rgb(186, 186, 186); 
+}
+
+button {
+    background-color: #ff4d00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+span.psw {
+    padding-top: 0;
+}
+
+@media screen and (max-width: 300px) {
+    .form-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    span.psw {
+      padding-top: 16px;
+    }
+}
+.container .log{
+    color:#f0f0f0;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; 
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px;
+    }
+}
+
+/* Style for the prev/next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logos">
+        <div class="logo">
+            <img src="logo2.png" alt="Logo">
+        </div>
+        <div class="logo1">
+            <img src="logo1.png" alt="Logo">
+        </div>
+    </div>
+   
+    <div class="profile">
+      <img src="Profile icon.png" alt="Profile Icon" class="profile-icon">
+    </div>
+</div>
+
+<div class="container">
+  <form id="loginForm">
+    <h2>Login Form</h2>
+
+    <label for="uname"><b>Username</b></label>
+    <input class="usname" type="text" placeholder="VUyyBrnN012345" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+   
+
+
+    <div>
+      <label><input type="radio" name="role" value="student" required> Student</label>
+      <label><input type="radio" name="role" value="trainee" required> Recruiter</label>
+    </div>
+
+    <button type="submit"><div class="log"><a onclick="window.location.href='homepage.html'">Login</a></div></button>
+
+    <div class="form-footer">
+      <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+      <span class="psw"><a href="#">Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="placements_companies_18-1.jpeg" alt="Slide 1">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://s.financesonline.com/uploads/2021/04/Internship-Statistics-Image-1.jpeg" alt="Slide 2">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://collegevidya.com/blog/wp-content/uploads/2022/07/Types-of-Professional-Courses.jpg" alt="Slide 3">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); 
+}
+
+function plusSlides(n) {
+  showSlidesManual(slideIndex += n);
+}
+
+function showSlidesManual(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+<footer class="bg-dark-red text-white p-4">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Course Platform. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+
+</html>

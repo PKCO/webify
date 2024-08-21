@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webify - Test Types</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav.css" />
+    
+    <style>
+        .bg-custom-blue { background-color: #1E40AF; }
+        .text-custom-blue { color: #1E40AF; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+
+    <div class="navbar">
+        <div class="logos">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <div class="logo1">
+                <img src="logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Courses</a>
+                <div class="dropdown-content">
+                  <a href="index.html">Full Stack</a>
+                  <a href="index.html">Data Science</a>
+                  <a href="index.html">Digital Marketing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+                <div class="dropdown-content">
+                  <a href="internshipsweb.html">Internship</a>
+                  <a href="placement.html">Placements</a>
+              </div>
+                
+            </div>
+            
+            <div class="dropdown">
+                <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+            </div>
+            <div class="dropdown">
+                <a href="#resources" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="test.html">SAT</a>
+                    <a href="mocks.html">Mock interview</a>
+                    <a href="chatbot.html">Chatbot</a>
+                </div>
+            </div>
+         
+            <div class="dropdown">
+                <a href="contactus.html" class="dropbtn">Contact Us</a>
+               
+            </div>
+            <div>
+              <a href="mid.html" class="dropbtn">Sign Out</a>
+            </div>
+        </div>
+        <div class="profile">
+          <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+      </div>
+      </div>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto text-center py-12">
+        <h2 class="text-4xl font-bold text-gray-800">Different Test Types</h2>
+        <p class="mt-2 text-gray-600">Combine these tests into a single assessment based on the role. Then, share the assessment with your candidates.</p>
+    </section>
+
+    <!-- Test Types Section -->
+    <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700">Aptitude Test</h3>
+            <p class="mt-2 text-gray-600">If 5x + 3y = 8 and y = 3, what is x?</p>
+            <div class="flex items-center mt-4">
+                <button class="bg-green-100 text-green-600 px-3 py-1 rounded mr-2">-5</button>
+                <button class="bg-green-100 text-green-600 px-3 py-1 rounded mr-2">-1/5</button>
+                <button class="bg-red-100 text-red-600 px-3 py-1 rounded">3</button>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700">Quiz</h3>
+            <p class="mt-2 text-gray-600">Test for knowledge of specific skills using Equip's content or your own.</p>
+            <a href="exam.html" class="text-custom-blue hover:underline mt-4 block">Try Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700">Programming</h3>
+            <p class="mt-2 text-gray-600">Similar to HackerRank. We automatically rank candidates' code. No more manual evaluation.</p>
+            <a href="exam.html" class="text-custom-blue hover:underline mt-4 block">Try Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700">Communication Skills Test</h3>
+            <p class="mt-2 text-gray-600">Record yourself speaking the following text</p>
+            <a href="exam.html" class="text-custom-blue hover:underline mt-4 block">Try Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700">English Skills</h3>
+            <p class="mt-2 text-gray-600">Listening, Reading, Writing and Speaking tests for language, communication, Grammar & Vocabulary.</p>
+            <a href="exam.html" class="text-custom-blue hover:underline mt-4 block">Try Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700">Video Response</h3>
+            <p class="mt-2 text-gray-600">Test for communication and technical skills. Record your questions via text. Candidate records a video in response.</p>
+            <a href="exam.html" class="text-custom-blue hover:underline mt-4 block">Try Now</a>
+        </div>
+    </section>
+
+    <section class="container mx-auto text-center py-4">
+        <a href="#" class="text-custom-blue hover:underline">Show more</a>
+    </section>
+
+<footer class="bg-dark-red text-white p-4">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Course Platform. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

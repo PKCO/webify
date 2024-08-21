@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <div class="navbar">
+        <div class="logos">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <div class="logo1">
+                <img src="logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Courses</a>
+                <div class="dropdown-content">
+                  <a href="index.html">Full Stack</a>
+                  <a href="index.html">Data Science</a>
+                  <a href="index.html">Digital Marketing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+                <div class="dropdown-content">
+                    <a href="internshipsweb.html">Internship</a>
+                    <a href="placement.html">Placements</a>
+                </div>
+                
+            </div>
+            
+            <div class="dropdown">
+                <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+                
+            </div>
+            <div class="dropdown">
+                <a href="#resources" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="#resource1">Resource 1</a>
+                    <a href="#resource2">Resource 2</a>
+                    <a href="#resource3">Resource 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#company" class="dropbtn">Contact Us</a>
+               
+            </div>
+            <div>
+              <a href="mid.html" class="dropbtn">Sign Out</a>
+            </div>
+        </div>
+        <div class="profile">
+          <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-dark-red text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold">Find Your Dream Internship</h2>
+            <p class="mt-4 text-lg">Join thousands of students finding internships worldwide</p>
+            <button class="mt-6 bg-white text-dark-red px-4 py-2 rounded">Explore Internships</button>
+        </div>
+    </section>
+
+    <!-- Internship Listings -->
+    <section id="internships" class="container mx-auto py-12">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-dark-red">Available Internships</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Full Stack Development Internship</h3>
+                <p class="mt-2">Duration: 12 weeks</p>
+                <p>Company: TechCorp</p>
+                <p>Location: Remote</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='fullstack.html'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Data Analysis Internship</h3>
+                <p class="mt-2">Duration: 10 weeks</p>
+                <p>Company: DataSolutions</p>
+                <p>Location: New York, NY</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='internship-details.html?internship=data-analysis'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Digital Marketing Internship</h3>
+                <p class="mt-2">Duration: 8 weeks</p>
+                <p>Company: MarketMinds</p>
+                <p>Location: Remote</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='internship-details.html?internship=digital-marketing'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Machine Learning Internship</h3>
+                <p class="mt-2">Duration: 12 weeks</p>
+                <p>Company: AI Innovations</p>
+                <p>Location: San Francisco, CA</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='internship-details.html?internship=machine-learning'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Graphic Design Internship</h3>
+                <p class="mt-2">Duration: 6 weeks</p>
+                <p>Company: CreativeWorks</p>
+                <p>Location: Remote</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='internship-details.html?internship=graphic-design'">Learn More</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Cybersecurity Internship</h3>
+                <p class="mt-2">Duration: 14 weeks</p>
+                <p>Company: SecureTech</p>
+                <p>Location: Remote</p>
+                <button class="mt-4 bg-dark-red text-white px-4 py-2 rounded" onclick="window.location.href='internship-details.html?internship=cybersecurity'">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-red text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Internship Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

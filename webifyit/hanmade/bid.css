@@ -1,0 +1,102 @@
+
+body {
+    margin: 0;
+padding: 0;
+font-family: 'Arial', sans-serif;
+background: url('https://cdn11.bigcommerce.com/s-x49po/images/stencil/1500x1500/products/69752/259179/1621169264161_MIX0510_2436__51656.1687167268.jpg?c=2https://www.wallpapers13.com/wp-content/uploads/2015/12/Wallpaper-field-ears-grains-rye-evening-sunset-sun-2560x1600-840x525.jpg') no-repeat center center fixed;
+background-size: cover;
+color: #fff;
+}
+
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: 100px auto;
+background-color: rgba(0, 0, 0, 0.8);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.left-section img {
+width: 150px; 
+margin-right: 20px;
+border-radius: 8px; 
+}
+
+h1 {
+color: #ffd700;
+}
+
+form {
+margin-top: 20px;
+}
+
+label {
+display: block;
+margin-bottom: 10px;
+color: #fff;
+}
+
+input {
+padding: 10px;
+margin-bottom: 10px;
+box-sizing: border-box;
+border: none;
+border-radius: 4px;
+}
+
+button {
+background-color: #4caf50;
+color: #fff;
+padding: 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.red-text {
+color: #e74c3c;
+}
+
+#payButton {
+background-color: #3498db;
+color: #fff;
+padding: 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+#payButton:disabled {
+background-color: #7f8c8d;
+cursor: not-allowed;
+}
+.back-button-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    color: #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #2980b9;
+  }

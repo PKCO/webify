@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Login and Slideshow</title>
+<script src="https://cdn.tailwindcss.com"></script> <!--cdn-->
+<link rel="stylesheet" href="style.css" />
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 60px;
+    margin-right: 10px; 
+}
+
+.logo1 img {
+    width: 100px;
+    height: 50px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar .nav-links a.active {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Profile icon styling */
+.navbar .profile {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.slideshow-container {
+    max-width: 2800px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover; 
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px;
+    }
+}
+
+/* Style for the prev/next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+      /* Custom styles for hover effect */
+      .hover-pop:hover {
+        transform: scale(1.05);
+        background-color: #b81717; /* Red color on hover */
+        color: white; /* White text color on hover */
+      }
+
+      @font-face {
+    font-display: fallback;
+    font-family: ProximaNova;
+    src: url(fonts/0d4ec08dc6b105c09ea2f98b104ee5be.woff2) format("woff2"),
+      url(fonts/700c6aabf7c76ee975ea9ecd1597fc5a.woff) format("woff");
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: ProximaNova;
+    font-weight: 800;
+    src: url(fonts/f9527cb231fbb96f8b847c6bb2577e73.woff2) format("woff2"),
+      url(fonts/b4f7fae18f78776aecb7aecce2ee96fe.woff) format("woff");
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: 600;
+    src: url(fonts/4c112e110a336202365ba00324390d27.woff2) format("woff2"),
+      url(fonts/d4b0fa776100b2a6d092630b50f2108e.woff) format("woff");
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: ProximaNova;
+    font-style: italic;
+    font-weight: 800;
+    src: url(fonts/84d9762503458c60562afc18868f900c.woff2) format("woff2"),
+      url(fonts/928843c2f85d1df752f538207505d8b8.woff) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/5b91b90ca9c385a6a0b2d51801fa0458.woff2) format("woff2"),
+      url(fonts/9c8e0760bfc4eccefea167de6225d1a5.woff) format("woff");
+  }
+  
+  *{
+      font-family: ProximaNova;
+      box-sizing: border-box;
+  }
+</style>
+<div class="navbar">
+  <div class="logos">
+      <div class="logo">
+          <img src="logo2.png" alt="Logo">
+      </div>
+      <div class="logo1">
+          <img src="logo1.png" alt="Logo">
+      </div>
+  </div>
+  <div class="nav-links">
+      <div class="dropdown">
+          <a href="index.html" class="dropbtn">Courses</a>
+          <div class="dropdown-content">
+            <a href="index.html">Full Stack</a>
+            <a href="index.html">Data Science</a>
+            <a href="index.html">Digital Marketing</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+          <div class="dropdown-content">
+            <a href="internshipsweb.html">Internship</a>
+            <a href="placement.html">Placements</a>
+        </div>
+          
+      </div>
+      
+      <div class="dropdown">
+          <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+      </div>
+      <div class="dropdown">
+          <a href="#resources" class="dropbtn">Resources</a>
+          <div class="dropdown-content">
+              <a href="test.html">SAT</a>
+              <a href="mocks.html">Mock interview</a>
+              <a href="chatbot.html">Chatbot</a>
+          </div>
+      </div>
+   
+      <div class="dropdown">
+          <a href="contactus.html" class="dropbtn">Contact Us</a>
+         
+      </div>
+      <div>
+        <a href="mid.html" class="dropbtn">Sign Out</a>
+      </div>
+  </div>
+  <div class="profile">
+    <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+</div>
+</div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="pic.jpeg" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Carousel_1.jpg" alt="Slide 1">
+          </div>
+      
+        <div class="mySlides fade">
+          <img src="Laptop.jpg" alt="Slide 2">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="Carousel_2.jpg" alt="Slide 3">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+      </div>
+
+    <section class="grid grid-cols-4 gap-4 bg-white p-12">
+      <div class="bg-white text-black p-8 border border-gray-200 rounded-xl hover-pop transition duration-300 ease-in-out">
+        <h1 class="text-3xl font-semibold mb-4">Student</h1>
+        <hr>
+        <h2 class="text-lg mt-4">
+            The system empowers students to create comprehensive job profiles, enabling them to search for and apply to jobs and 
+            internships easily. Additionally, it provides instant job matches, helping to propel their careers to the next level. 
+            And Courses for futher development. 
+        </h2>
+      </div>
+
+      <div class="bg-white text-black p-8 border border-gray-200 rounded-xl hover-pop transition duration-300 ease-in-out">
+        <h1 class="text-3xl font-semibold mb-4">Placement team</h1>
+        <hr>
+        <h2 class="text-lg mt-4">
+            The system attracts multiple companies and manages them from a centralized platform. It securely captures and 
+            accesses student and employer data and reports with a single click, streamlining communication and coordination 
+            for efficient placement operations.
+        </h2>
+      </div>
+
+      <div class="bg-white text-black p-8 border border-gray-200 rounded-xl hover-pop transition duration-300 ease-in-out">
+        <h1 class="text-3xl font-semibold mb-4">Internships & courses</h1>
+        <hr>
+        <h2 class="text-lg mt-4">
+            The system provides a platform for companies to create and manage multiple internship and course offerings. This allows 
+            them to attract a diverse pool of students and professionals seeking practical experience and skill development. Companies can 
+            leverage the system to match candidates based on their skills, GPA, and certifications, ensuring a tailored and effective learning experience. 
+        </h2>
+      </div>
+
+      <div class="bg-white text-black p-8 border border-gray-200 rounded-xl hover-pop transition duration-300 ease-in-out">
+        <h1 class="text-3xl font-semibold mb-4">Companies</h1>
+        <hr>
+        <h2 class="text-lg mt-4">
+            Companies
+            Create multiple job postings and get instant access to the entire students' database to match them 
+            based on skills, GPA, and certificates for the best hiring experience.
+        </h2>
+      </div>
+    </section>
+
+    <!-- This div is the bottom section of the page -->
+    <div id="bottom"></div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); 
+        }
+
+        function plusSlides(n) {
+          showSlidesManual(slideIndex += n);
+        }
+
+        function showSlidesManual(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+<footer class="bg-dark-red text-white p-4">
+  <div class="container mx-auto text-center">
+      <p>&copy; 2024 WEBIFY. All rights reserved.</p>
+  </div>
+  <style>/* Define the dark red background color */
+    .bg-dark-red {
+        background-color: #8B0000; /* Dark red color */
+    }
+    
+    /* Optional: Additional styling for the footer */
+    footer {
+        padding: 1rem; /* Padding for the footer */
+    }
+    
+    footer p {
+        margin: 0; /* Remove default margins from the paragraph */
+        font-size: 1rem; /* Font size for the paragraph */
+    }
+    </style>
+</footer>
+</body>
+</html>

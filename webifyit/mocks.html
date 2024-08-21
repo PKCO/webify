@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mock Interviews - Webify</title>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+        .shadow-dark-red { box-shadow: 0px 0px 10px #8b0000; }
+        .hover-bg-darker-red:hover { background-color: #990000; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    
+    <div class="navbar">
+        <div class="logos">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <div class="logo1">
+                <img src="logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Courses</a>
+                <div class="dropdown-content">
+                  <a href="index.html">Full Stack</a>
+                  <a href="index.html">Data Science</a>
+                  <a href="index.html">Digital Marketing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+                <div class="dropdown-content">
+                  <a href="internshipsweb.html">Internship</a>
+                  <a href="placement.html">Placements</a>
+              </div>
+                
+            </div>
+            
+            <div class="dropdown">
+                <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+            </div>
+            <div class="dropdown">
+                <a href="#resources" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="test.html">SAT</a>
+                    <a href="mocks.html">Mock interview</a>
+                    <a href="chatbot.html">Chatbot</a>
+                </div>
+            </div>
+         
+            <div class="dropdown">
+                <a href="contactus.html" class="dropbtn">Contact Us</a>
+               
+            </div>
+            <div>
+              <a href="mid.html" class="dropbtn">Sign Out</a>
+            </div>
+        </div>
+        <div class="profile">
+          <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+      </div>
+      </div>
+    <!-- Hero Section -->
+    <section class="bg-dark-red text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold">Welcome to Our Mock Interview Platform</h2>
+            <p class="mt-4 text-lg">Prepare for your real interviews by practicing with us!</p>
+            <button class="mt-6 bg-white text-dark-red px-4 py-2 rounded hover-bg-darker-red" onclick="scrollToVideo()">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="container mx-auto py-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg shadow-dark-red">
+            <h2 class="text-3xl font-semibold text-center mb-6 text-dark-red">Why Choose Us?</h2>
+            <ul class="list-disc list-inside text-lg mb-6">
+                <li>Professional Interviewers</li>
+                <div class="flex items-center mb-4">
+                    <span>What Are Mock Interviews?
+                        Mock interviews are simulated job interviews that replicate the real interview experience as closely as possible. They provide candidates with an opportunity to practice their interview skills, receive feedback, and improve their performance in a supportive environment. Mock interviews are often conducted by career coaches, mentors, or peers and can take place in-person or virtually</span>
+                </div>
+                <!-- Add more interviewer divs as needed -->
+            </ul>
+            <ul class="list-disc list-inside text-lg">
+                <li>Customized Mock Interviews</li>
+                <li>Feedback and Improvement Tips</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="video_section" class="container mx-auto py-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg shadow-dark-red">
+            <h2 class="text-3xl font-semibold text-center mb-6 text-dark-red">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-dark-red text-white p-6 rounded-lg shadow-lg cursor-pointer hover-bg-darker-red" onclick="playVideo('technical_video')">
+                    <h3 class="text-2xl font-bold mb-2">Mock Technical Interviews</h3>
+                    <p>Click to watch</p>
+                </div>
+                <div class="bg-dark-red text-white p-6 rounded-lg shadow-lg cursor-pointer hover-bg-darker-red" onclick="playVideo('behavioral_video')">
+                    <h3 class="text-2xl font-bold mb-2">Mock Behavioral Interviews</h3>
+                    <p>Click to watch</p>
+                </div>
+                <div class="bg-dark-red text-white p-6 rounded-lg shadow-lg cursor-pointer hover-bg-darker-red" onclick="playVideo('case_study_video')">
+                    <h3 class="text-2xl font-bold mb-2">Mock Case Study Interviews</h3>
+                    <p>Click to watch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Popup -->
+    <div id="videoPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg shadow-dark-red relative">
+            <span class="absolute top-2 right-2 text-xl cursor-pointer" onclick="hidePopup()">×</span>
+            <video id="video_player" controls class="w-full h-auto">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function scrollToVideo() {
+            var videoSection = document.getElementById('video_section');
+            videoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function playVideo(videoId) {
+            var videoPlayer = document.getElementById('video_player');
+            var videoSource = document.createElement('source');
+            videoSource.setAttribute('src', getVideoSource(videoId));
+            videoSource.setAttribute('type', 'video/mp4');
+            videoPlayer.innerHTML = ''; // Clear previous source elements
+            videoPlayer.appendChild(videoSource);
+            videoPlayer.load(); // Reload the video element
+            showPopup();
+        }
+
+        function getVideoSource(videoId) {
+            switch (videoId) {
+                case 'technical_video':
+                    return 'https://www.example.com/technical_interview.mp4'; // Replace with the actual URL of the technical interview video
+                case 'behavioral_video':
+                    return 'behavioral_interview.mp4'; // Replace with the actual path of the behavioral interview video
+                case 'case_study_video':
+                    return 'case_study_interview.mp4'; // Replace with the actual path of the case study interview video
+                default:
+                    return '';
+            }
+        }
+
+        function showPopup() {
+            document.getElementById('videoPopup').classList.remove('hidden');
+        }
+
+        function hidePopup() {
+            var videoPlayer = document.getElementById('video_player');
+            videoPlayer.pause(); // Pause the video when closing the popup
+            document.getElementById('videoPopup').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

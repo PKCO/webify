@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Recorded</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .response-container {
+            background-color: rgba(0, 0, 0, 0.551); 
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center; 
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #submit-another {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #go-to-home {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="response-container">
+        <h1>Your response has been recorded!</h1>
+
+        <div class="button-container">
+            <button class="button" id="submit-another">Submit Another Response</button>
+            <button class="button" id="go-to-home">Go to Home</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit-another').addEventListener('click', function () {
+            window.location.href = 'contactus.html'; 
+
+        document.getElementById('go-to-home').addEventListener('click', function () {
+            window.location.href = 'cont.html'; 
+        })});
+    </script>
+</body>
+
+</html>

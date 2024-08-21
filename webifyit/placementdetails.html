@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav.css" />
+
+    <style>
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="navbar">
+        <div class="logos">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <div class="logo1">
+                <img src="logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Courses</a>
+                <div class="dropdown-content">
+                  <a href="index.html">Full Stack</a>
+                  <a href="index.html">Data Science</a>
+                  <a href="index.html">Digital Marketing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+                <div class="dropdown-content">
+                  <a href="internshipsweb.html">Internship</a>
+                  <a href="placement.html">Placements</a>
+              </div>
+                
+            </div>
+            
+            <div class="dropdown">
+                <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+            </div>
+            <div class="dropdown">
+                <a href="#resources" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="#resource1">Resource 1</a>
+                    <a href="#resource2">Resource 2</a>
+                    <a href="#resource3">Resource 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#company" class="dropbtn">Contact Us</a>
+               
+            </div>
+            <div>
+              <a href="mid.html" class="dropbtn">Sign Out</a>
+            </div>
+        </div>
+        <div class="profile">
+          <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+      </div>
+      </div>
+    <!-- Job Posting -->
+    <section class="container mx-auto py-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-semibold text-dark-red mb-4">Full Stack Web Developer</h2>
+            <p class="text-lg font-semibold mb-4">Be an early applicant</p>
+            <h3 class="text-3xl font-semibold text-dark-red mb-4">Key Responsibilities</h3>
+            <p class="mb-4">Are you passionate about web development and mentoring others? DevTown is looking for a Full Stack Web Development Mentor to join our team! As a mentor, you will have the opportunity to guide and support aspiring web developers in honing their skills and mastering the latest technologies.</p>
+            <h3 class="text-3xl font-semibold text-dark-red mb-4">Selected mentor's day-to-day responsibilities include:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>Provide guidance and mentorship to individuals as they work on real-world projects</li>
+                <li>Offer support and feedback on coding techniques, best practices, and problem-solving strategies</li>
+                <li>Assist in creating and delivering workshops and training sessions on various web development topics</li>
+                <li>Collaborate with other mentors and team members to ensure a positive and enriching learning experience</li>
+                <li>Stay up-to-date on industry trends and technologies to provide relevant and valuable insights to mentees</li>
+                <li>Help foster a collaborative and inclusive learning environment for individuals from diverse backgrounds</li>
+                <li>Contribute to the growth and success of DevTown by helping mentees reach their full potential</li>
+            </ul>
+            <h3 class="text-3xl font-semibold text-dark-red mb-4">Skill(s) required:</h3>
+            <p class="mb-4">
+                <span class="block">English Proficiency (Spoken)</span>
+                <span class="block">English Proficiency (Written)</span>
+                <span class="block">HTML & CSS</span>
+                <span class="block">MEAN/MERN Stack</span>
+            </p>
+            <h3 class="text-3xl font-semibold text-dark-red mb-4">Perks:</h3>
+            <p class="mb-4">
+                <span class="block">Certificate</span>
+                <span class="block">Letter of recommendation</span>
+            </p>
+            <div class="mb-8">
+                <h3 class="text-3xl font-semibold text-dark-red mb-4">About DevTown</h3>
+                <p class="mb-4">We strive to cultivate a change in the current learning strategy of students and incorporate a reasonable learning methodology, to make them future-prepared with good knowledge of technologies and profound practical experience in those fields with developing projects.</p>
+                <p>We believe that you will appreciate this learning excursion and shape your future with us at DevTown.</p>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-3xl font-semibold text-dark-red mb-4">Activity</h3>
+                <p class="mb-4">
+                    <span class="block">Hiring since May 2024</span>
+                    <span class="block">18 opportunities posted</span>
+                    <span class="block">3 candidates hired</span>
+                </p>
+            </div>
+            <button class="mt-2 bg-dark-red text-white px-4 py-2 rounded">Apply Now</button>
+           
+            <p class="pt-4">If you are a skilled Full Stack Web Developer with a passion for teaching and mentoring, we want to hear from you! Join us at DevTown and make a difference in the lives of aspiring web developers. Apply now and be a part of our dynamic team!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-red text-white p-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 DevTown. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

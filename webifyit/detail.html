@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+        .bg-dark-red { background-color: #8B0000; }
+        .text-dark-red { color: #8B0000; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="navbar">
+        <div class="logos">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <div class="logo1">
+                <img src="logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Courses</a>
+                <div class="dropdown-content">
+                  <a href="index.html">Full Stack</a>
+                  <a href="index.html">Data Science</a>
+                  <a href="index.html">Digital Marketing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="internshipsweb.html" class="dropbtn">Get Jobs</a>
+                <div class="dropdown-content">
+                  <a href="internshipsweb.html">Internship</a>
+                  <a href="placement.html">Placements</a>
+              </div>
+                
+            </div>
+            
+            <div class="dropdown">
+                <a href="homepage.html" class="dropbtn" onclick="scrollToBottom()">Why Webify</a>
+            </div>
+            <div class="dropdown">
+                <a href="#resources" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="test.html">SAT</a>
+                    <a href="mocks.html">Mock interview</a>
+                    <div class="sub-dropdown-content">
+                      <a href="mock.html">Mock Questions</a>
+                    <a href="chatbot.html">Chatbot</a>
+                </div>
+            </div>
+            <div class="dropdown">
+              <a href="#resources" class="dropbtn">Resources</a>
+              <div class="dropdown-content">
+                  <div class="sub-dropdown">
+                      <a href="#resource1" class="sub-dropbtn">Resource 1</a>
+                      <div class="sub-dropdown-content">
+                          <a href="#subresource1">Sub Resource 1</a>
+                          <a href="#subresource2">Sub Resource 2</a>
+                          <a href="#subresource3">Sub Resource 3</a>
+                      </div>
+                  </div>
+                  <a href="#resource2">Resource 2</a>
+                  <a href="#resource3">Resource 3</a>
+              </div>
+          </div>
+            <div class="dropdown">
+                <a href="#company" class="dropbtn">Contact Us</a>
+               
+            </div>
+            <div>
+              <a href="mid.html" class="dropbtn">Sign Out</a>
+            </div>
+        </div>
+        <div class="profile">
+          <a href="profile.html"><img src="profile.png" alt="Profile Icon" class="profile-icon"></a>
+      </div>
+      </div>
+    <!-- Hero Section -->
+    <section class="bg-dark-red text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold">Full Stack Development Placement Guarantee Course</h2>
+            <p class="mt-4 text-lg">Future-proof your tech career with our comprehensive course using python or Java</p>
+            <button class="mt-6 bg-white text-dark-red px-4 py-2 rounded">Download Brochure</button>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-dark-red">Course Overview</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">500 hours of learning</h3>
+                <p class="mt-2">Gain in-depth knowledge and skills</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">9 courses</h3>
+                <p class="mt-2">Comprehensive curriculum covering all aspects of full stack development</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">5 Projects</h3>
+                <p class="mt-2">Hands-on projects to solidify your learning</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">15 assignments</h3>
+                <p class="mt-2">Regular assignments to keep you on track</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">4 AI tools covered</h3>
+                <p class="mt-2">Learn top AI tools like ChatGPT & Claude</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-red">Live placement bootcamp</h3>
+                <p class="mt-2">Get placement-ready with live bootcamps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-dark-red">Course Modules</h2>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">1. Full Stack Development: Let's begin</h3>
+            <p class="mt-2">2 Modules | 1 Demo video inside</p>
+            <p class="mt-2">Introduction to Full Stack Development, Getting Started with Visual Studio Code</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">2. Designing Web Pages Using HTML and CSS</h3>
+            <p class="mt-2">4 Modules | 2 Demo videos inside</p>
+            <p class="mt-2">Project: Create Your Personal Portfolio Website</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">3. Git and GitHub: Mastering Version Control</h3>
+            <p class="mt-2">1 Module</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">4. Developing Interactive Websites with JavaScript</h3>
+            <p class="mt-2">7 Modules | 2 Demo videos inside</p>
+            <p class="mt-2">Project: Create a Weather Forecast Application</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">5. Cracking the Code: Data Structures and Algorithms (DSA) in JavaScript - I</h3>
+            <p class="mt-2">5 Modules</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">6. Cracking the Code: Data Structures and Algorithms (DSA) in JavaScript - II</h3>
+            <p class="mt-2">6 Modules</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">7. Building Modern Web Applications Using React</h3>
+            <p class="mt-2">5 Modules</p>
+            <p class="mt-2">Project: Build an E-Commerce Platform (Shoppyglobe)</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">8. Mastering Node.js, Express.js and MongoDB</h3>
+            <p class="mt-2">3 Modules</p>
+            <p class="mt-2">Project: Build APIs with Node.js and Express.js for Shoppyglobe</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-dark-red">9. Build Your Own Capstone Project</h3>
+            <p class="mt-2">1 Module</p>
+            <p class="mt-2">Project: Build a YouTube Clone</p>
+        </div>
+    </section>
+
+    <!-- Placement Bootcamp -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-dark-red">Live Placement Bootcamp</h2>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-dark-red">NEW</h3>
+            <ul class="list-disc list-inside">
+                <li>6 Placement-Ready Exercises</li>
+                <li>Full Course Revision with Doubt Solving</li>
+                <li>Bonus Study Material</li>
+                <li>Full stack development interview simulation</li>
+                <li>50+ Live Practice Problems</li>
+                <li>Industry-level Project Solving</li>
+                <li>Live Coding Practice with Java & PHP</li>
+            </ul>
+            <p class="mt-4">After completing a course, you can download its videos for future reference.</p>
+            <p class="mt-4">Future-proof your tech career by learning top AI tools like ChatGPT & Claude for code generation, code review, and debugging.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-red text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Course Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

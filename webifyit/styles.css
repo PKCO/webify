@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #080808;
+}
+
+html {
+    height: 100%;
+    background: #e8f1f7;
+
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.heaven{
+    gap: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.hel{
+    margin-right: 50px ;
+}
+header h1 {
+    margin: 0;
+    color: #000000;
+    background-color: #C9E1F2;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.logo{
+    height: 110px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  /* Your existing CSS goes here */
+
+/* Additional styling for the new content */
+.about-us {
+    text-align: center;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.tagline {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    line-height: 1.6;
+    text-align: left;
+    max-width: 800px;
+    margin: 10px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.main-content{
+    margin: 30px;
+    float: inline-end;
+}
+.cta-btn {
+    margin: 10px;
+}
+
+.cta-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+/* Your existing CSS goes here */
+
+/* Additional styling for the new content */
+.about-us {
+    text-align: center;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added margin at the bottom */
+}
+
+.tagline {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    line-height: 1.6;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cta-btn {
+    margin: 0 10px;
+}
+
+.cta-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    background-color: #33333379;
+    padding: 10px;
+    text-align: center;
+    position:fixed ;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    margin-top: 20px; /* Added margin at the top */
+}
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .product-listing{
+    margin: 20px;
+  }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+.topnav {
+    overflow: hidden;
+    background-color: #b8b7dcba;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topnav a:hover {
+    background-color: #ffffff7e;
+    color: rgba(0, 0, 0, 0.79);
+}
+
+.topnav a.active {
+    background-color: #ffffffc4;
+    color: rgba(28, 26, 26, 0.688);
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    transition: border 0.3s ease;
+}
+.platform-info{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.platform-info h1{
+    animation: sli;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ffffff00;
+    }
+}
+
+button {
+    display: inline-block;
+    margin: 6px;
+    background-color: #f5e725;
+    padding: 10px 15px;
+    color: #121212;
+    border-radius: 15px;
+    border-color: #f6d622;
+}
+
+button:hover {
+    background-color: #dfc112;
+}
+button a{
+    text-decoration: none; /* Remove underline from the links within buttons */
+    color: inherit;
+}

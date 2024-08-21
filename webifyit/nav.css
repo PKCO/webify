@@ -1,0 +1,102 @@
+/* General styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.navbar .logos {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logos .logo, .navbar .logos .logo1 {
+    margin-right: 10px;
+}
+
+.navbar .logos img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .dropdown {
+    position: relative;
+    margin-right: 10px;
+}
+
+.nav-links .dropdown .dropbtn {
+    background-color: #fffefe;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-links .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-links .dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links .dropdown .dropdown-content .sub-dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown .dropdown-content .sub-dropdown .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-links .dropdown .dropdown-content .sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+.nav-links .dropdown .dropdown-content .sub-dropdown .sub-dropbtn {
+    padding: 12px 16px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links .dropdown .dropdown-content .sub-dropdown-content a {
+    padding: 12px 16px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .profile-icon {
+    height: 40px;
+}
